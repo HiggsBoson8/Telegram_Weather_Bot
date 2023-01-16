@@ -88,6 +88,7 @@ created: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
         await message.reply(get_weather_def)
 
         if len(message_count) >= 3:
+            await message.answer("Ну все, хватит спамить!")
             await message.reply_sticker(random.choice(STICKER_001))
             message_count.clear()
 
